@@ -11,7 +11,7 @@ const Register = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const handleRegister = async () => {
-    await axios.post("http://localhost:5000/register", { username, email, password });
+    await axios.post("https://backend-recipe-sharing-1.onrender.com", { username, email, password });
     localStorage.setItem("username", username);
     setIsLoggedIn(true);
     navigate("/home");
